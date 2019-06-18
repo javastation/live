@@ -37,8 +37,9 @@ const devConfig = {
         pathRewrite: { '^/api': '' }
       }
     },
-    host: '192.168.2.101',
-    https: true,
+    open: true,
+    // host: '192.168.2.101',
+    // https: true,
     port: 9000
   },
   plugins: [
@@ -49,6 +50,4 @@ const devConfig = {
     })
   ]
 }
-
-console.log(merge(baseConfig, devConfig))
 module.exports = merge(baseConfig, devConfig)

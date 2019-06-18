@@ -20,7 +20,7 @@ const baseConfig = {
       page: path.resolve(__dirname, '../src/pages'),
       'react-dom': '@hot-loader/react-dom'
     },
-    extensions: ['.js', '.jsx']
+    extensions: [".ts", ".tsx", '.js', '.jsx',]
   },
   /* src文件夹下面的以.js结尾的文件，要使用babel解析 */
   /* cacheDirectory是用来缓存编译结果，下次编译加速 */
@@ -40,6 +40,7 @@ const baseConfig = {
         include: path.join(__dirname, '../src'),
         exclude: /node_modules/
       },
+      { test: /\.tsx?$/, loader: 'ts-loader' },
       {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
@@ -71,7 +72,7 @@ const baseConfig = {
       template: path.join(__dirname, '../index.html')
     }),
     new webpack.HashedModuleIdsPlugin()
-  ]
+  ],
 }
 
 module.exports = baseConfig

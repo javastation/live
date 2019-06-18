@@ -10,6 +10,10 @@ const routes = [
   {
     path: '/live',
     file: 'live'
+  },
+  {
+    path: '/test',
+    file: 'test'
   }
 ]
 export default routes
